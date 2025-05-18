@@ -32,12 +32,12 @@ class TaskAdapter(
         holder.date.text = task.date
         holder.time.text = task.time
 
-        // 🔁 EDIT: On Click
+        // EDIT: On Click
         holder.itemView.setOnClickListener {
             onEditClick(position)
         }
 
-        // 🗑 DELETE: On Long Click
+        // DELETE: On Long Click
         holder.itemView.setOnLongClickListener {
             taskList.removeAt(position)
             notifyItemRemoved(position)
