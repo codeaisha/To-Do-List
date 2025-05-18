@@ -23,7 +23,7 @@ class AddTaskActivity : AppCompatActivity() {
         editTextDescription = findViewById(R.id.editTextDescription)
         buttonSave = findViewById(R.id.buttonSave)
 
-        // ✍️ Pre-fill fields if editing
+        // Pre-fill fields if editing
         val titleFromIntent = intent.getStringExtra("task_title")
         val descriptionFromIntent = intent.getStringExtra("task_description")
 
@@ -35,7 +35,7 @@ class AddTaskActivity : AppCompatActivity() {
             editTextDescription.setText(descriptionFromIntent)
         }
 
-        // 💾 Save button click
+        // Save button click
         buttonSave.setOnClickListener {
             val title = editTextTitle.text.toString().trim()
             val description = editTextDescription.text.toString().trim()
